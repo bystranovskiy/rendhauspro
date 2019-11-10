@@ -1,0 +1,26 @@
+html {
+  background: $bg-color;
+}
+
+body {
+  font: 14px/16px Circe, Arial, Verdana, sans-serif;
+  color: $brand-color-secondary;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 -15px;
+
+  .col {
+    padding: 0 15px;
+    flex: 1;
+  }
+}

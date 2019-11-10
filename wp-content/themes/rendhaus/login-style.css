@@ -1,0 +1,59 @@
+#login h1 a {
+    background: url('/wp-content/themes/rendhaus/assets/imgs/rendhaus-logo-with-text.svg') no-repeat 0 0 !important;
+    height: 60px;
+    width: 200px;
+}
+
+body {
+    background: #1c1c1c;
+}
+
+a {
+    color: #803c1c;
+}
+
+a:hover {
+    color: #b74a1c;
+}
+
+.login #backtoblog a, .login #nav a {
+    color: #979695;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover {
+    color: #fff;
+}
+
+.login #login_error, .login .message {
+    border-color: #893c1b;
+}
+
+.login #backtoblog, .login #nav {
+    padding: 0 5px;
+    margin: 5px 0;
+}
+
+.wp-core-ui .button-primary {
+    background: #803c1c;
+    border-color: #5a2b17 #5a2b17 #5a2b17;
+    -webkit-box-shadow: 0 1px 0 #5a2b17;
+    box-shadow: 0 1px 0 #5a2b17;
+    text-shadow: 0 -1px 1px #7b3619, 1px 0 1px #7b3619, 0 1px 1px #7b3619, -1px 0 1px #7b3619;
+}
+
+.wp-core-ui .button-primary:hover, .wp-core-ui .button-primary:focus {
+    background: #b74a1c;
+    border-color: #7b3619 #7b3619 #7b3619;
+    -webkit-box-shadow: 0 1px 0 #7b3619;
+    box-shadow: 0 1px 0 #7b3619;
+    text-shadow: 0 -1px 1px #7b3619, 1px 0 1px #7b3619, 0 1px 1px #7b3619, -1px 0 1px #7b3619;
+}
+
+.login form .input {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.login form .input:focus {
+    border-color: #59554b;
+}

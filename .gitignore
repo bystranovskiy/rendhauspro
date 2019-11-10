@@ -1,0 +1,6 @@
+.idea
+**/build
+**/node_modules
+login.txt
+**/DS_Store
+wp-config.php

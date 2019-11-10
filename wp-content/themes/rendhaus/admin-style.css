@@ -1,0 +1,13 @@
+#adminmenu li#toplevel_page_wpcf7,
+#adminmenu li#toplevel_page_sitepress-multilingual-cms-menu-languages,
+#wp-admin-bar-site-name,
+#wp-admin-bar-updates,
+#wp-admin-bar-comments,
+#wp-admin-bar-new-content {
+    display: none !important;
+}
+
+#adminmenu li.current a.menu-top, #adminmenu li.wp-has-current-submenu .wp-submenu .wp-submenu-head, #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu, .folded #adminmenu li.current.menu-top, #adminmenu a:hover, #adminmenu li.menu-top:hover, #adminmenu li.opensub > a.menu-top, #adminmenu li > a.menu-top:focus {
+    background: #803c1c;
+}
+

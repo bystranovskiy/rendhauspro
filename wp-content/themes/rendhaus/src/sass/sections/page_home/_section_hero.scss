@@ -1,0 +1,143 @@
+.section-hero {
+  position: relative;
+
+  .slide {
+    padding-top: 100vh;
+    position: relative;
+    @media(max-width: 1200px) and (min-width: 769px) {
+      padding-top: 450px;
+    }
+
+    .slide-bg {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: -5%;
+      width: 110%;
+      height: 100%;
+      transform: translate(0 -50%);
+      animation: camera-move 20s ease-in-out infinite;
+
+      &:before {
+        content: "";
+        background: rgba(black, .7);
+        @include full-cover;
+      }
+    }
+
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+      max-width: 600px;
+      padding-right: 70px;
+    }
+
+    .slide-title {
+      color: #fff;
+      font-size: 70px;
+      font-weight: 500;
+      line-height: 72px;
+      @media(max-width: 1200px) {
+        font-size: 48px;
+        line-height: 50px;
+      }
+      @media(max-width: 768px) {
+        font-size: 36px;
+        line-height: 36px;
+      }
+    }
+
+    .side-description {
+      margin-top: 1rem;
+      transition: opacity 1.5s .7s, transform 1s .7s;
+      padding-left: 10px;
+      position: relative;
+      border-left: 1px solid $brand-color-secondary;
+    }
+
+    &:not(.animate) {
+      .content {
+        visibility: hidden;
+      }
+
+      .side-description {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+    }
+
+    &.animate {
+      @include animate-header;
+    }
+
+  }
+
+
+  .slick-dots {
+    position: absolute;
+    @include flex-align(center, center);
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+
+    li {
+      padding: 0 4px;
+
+      button {
+        cursor: pointer;
+        height: 20px;
+        width: 34px;
+        padding: 0;
+        border: 0;
+        font-size: 0;
+        display: block;
+        position: relative;
+
+        &:before {
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          content: "";
+          background-color: $brand-color-secondary;
+          transition: background-color .3s;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      &.slick-active {
+        button {
+          &:before {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    a {
+      color: $brand-color-secondary;
+      transition: .3s;
+      text-decoration: none;
+      padding: 5px;
+      display: inline-block;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+}
