@@ -6,7 +6,7 @@
 
     $(".animate-header").each(function () {
       const elem = $(this);
-      const line = elem.html().split(/i/);
+      const line = elem.html().split("");
 
       elem.empty();
 

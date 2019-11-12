@@ -31,15 +31,39 @@
       "src": "fontawesome"
     },
     {
-      "uid": "ccc2329632396dc096bb638d4b46fb98",
-      "css": "mail-alt",
-      "code": 61664,
-      "src": "fontawesome"
-    },
-    {
       "uid": "4c1ef492f1d2c39a2250ae457cee2a6e",
       "css": "instagram",
       "code": 61805,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e36d581e4f2844db345bddc205d15dda",
+      "css": "group",
+      "code": 59394,
+      "src": "elusive"
+    },
+    {
+      "uid": "1ea8ad6dbe1ae9a73565ad16cf88de19",
+      "css": "location",
+      "code": 59395,
+      "src": "linecons"
+    },
+    {
+      "uid": "bf882b30900da12fca090d9796bc3030",
+      "css": "mail",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "cdfalpadi7huwv9ah4fef2gpfpb4c6qm",
+      "css": "square",
+      "code": 59393,
+      "src": "typicons"
+    },
+    {
+      "uid": "531bc468eecbb8867d822f1c11f1e039",
+      "css": "calendar",
+      "code": 59397,
       "src": "fontawesome"
     }
   ]

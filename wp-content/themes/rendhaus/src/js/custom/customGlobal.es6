@@ -20,18 +20,6 @@
     });
 
 
-    /* Инициализация плагина niceScroll */
-    $(function () {
-      //$("body").niceScroll();
-    });
-
-
-    /* Мобильное меню */
-    $(".menu-toggle").on("click", (e) => {
-      const $this = $(e.currentTarget);
-      $this.toggleClass("active");
-      $("#menu-mainmenu").toggleClass("active");
-    });
 
 
   });
@@ -46,7 +34,7 @@
 
     if (isWinLarge !== isCurrWinLarge) {
       isWinLarge = isCurrWinLarge;
-      $("body").hide().delay(200).fadeIn(300);
+      $(".preloader").show().delay(600).fadeOut(500);
     }
 
   });

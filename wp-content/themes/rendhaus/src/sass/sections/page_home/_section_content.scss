@@ -1,0 +1,64 @@
+.section-content {
+  padding: 100px 0;
+  position: relative;
+  background-color: white;
+  color: $brand-color-secondary;
+  line-height: 1.4em;
+  overflow: hidden;
+  font-size: 14px;
+
+  .animated-image {
+    @media(min-width: 1025px) {
+      position: absolute;
+      right: 0;
+      max-width: 50vw;
+      width: 900px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    text-align: right;
+    right: -15px;
+    position: relative;
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+    }
+  }
+
+  @media(max-width: 1024px) {
+    .row {
+
+    }
+    .col {
+      width: 100%;
+      flex: auto;
+    }
+  }
+
+  &.reverse {
+    text-align: right;
+
+    .section-title {
+      &:after {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    .row {
+      flex-direction: row-reverse;
+    }
+
+    .animated-image {
+      text-align: left;
+      left: -15px;
+      right: auto;
+      @media(min-width: 1025px) {
+        right: auto;
+        left: 0;
+      }
+    }
+  }
+
+}

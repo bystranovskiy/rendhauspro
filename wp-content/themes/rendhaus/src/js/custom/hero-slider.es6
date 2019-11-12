@@ -4,16 +4,16 @@
 
   $(document).ready(function () {
 
-    const heroSlider = $('.hero-slider');
+    const heroSlider = $(".hero-slider");
 
-    heroSlider.on('init', function (event, slick) {
-      $(slick.$slides[0]).addClass('animate');
+    heroSlider.on("init", function (event, slick) {
+      $(slick.$slides[0]).addClass("animate");
     });
-    heroSlider.on('beforeChange', function (event, slick, currentSlide) {
-      $(slick.$slides[currentSlide]).removeClass('animate');
+    heroSlider.on("beforeChange", function (event, slick, currentSlide) {
+      $(slick.$slides[currentSlide]).removeClass("animate");
     });
-    heroSlider.on('afterChange', function (event, slick, currentSlide) {
-      $(slick.$slides[currentSlide]).delay(500).addClass('animate');
+    heroSlider.on("afterChange", function (event, slick, currentSlide) {
+      $(slick.$slides[currentSlide]).delay(500).addClass("animate");
     });
 
 
@@ -25,7 +25,7 @@
       autoplaySpeed: 8000,
       speed: 800,
       fade: true,
-      cssEase: 'linear',
+      cssEase: "linear",
       pauseOnHover: false,
       pauseOnFocus: false
     });

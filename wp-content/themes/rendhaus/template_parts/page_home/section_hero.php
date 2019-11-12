@@ -50,7 +50,7 @@
         <li><a href="<?php echo $facebook; ?>" target="_blank"><i class="icon-facebook"></i></a></li>
       <?php endif; ?>
       <?php if ($mail) : ?>
-        <li><a href="<?php echo $mail; ?>" target="_blank"><i class="icon-mail-alt"></i></a></li>
+        <li><a href="<?php echo $mail; ?>" target="_blank"><i class="icon-mail"></i></a></li>
       <?php endif; ?>
   </ul>
 

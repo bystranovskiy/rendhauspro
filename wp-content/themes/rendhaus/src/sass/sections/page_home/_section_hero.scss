@@ -41,14 +41,13 @@
       color: #fff;
       font-size: 70px;
       font-weight: 500;
-      line-height: 72px;
+      line-height: 0.95;
+      //letter-spacing: -0.02em;
       @media(max-width: 1200px) {
         font-size: 48px;
-        line-height: 50px;
       }
       @media(max-width: 768px) {
         font-size: 36px;
-        line-height: 36px;
       }
     }
 
@@ -57,7 +56,8 @@
       transition: opacity 1.5s .7s, transform 1s .7s;
       padding-left: 10px;
       position: relative;
-      border-left: 1px solid $brand-color-secondary;
+      border-left: 2px solid $brand-color-primary;
+      line-height: 1.4em;
     }
 
     &:not(.animate) {

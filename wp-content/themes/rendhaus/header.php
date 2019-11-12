@@ -24,7 +24,7 @@
     admin="<?php if (current_user_can('level_10')): echo 'true'; else: echo 'false'; endif; ?>">
 <div class="preloader"></div>
 
-<div class="header">
+<header>
   <div class="row">
     <div class="col">
       <a href="/" class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/rendhaus-logo.svg"
@@ -49,4 +49,4 @@
       </div>
     </div>
   </div>
-</div>
+</header>

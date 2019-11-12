@@ -1,6 +1,8 @@
-@include font-face("Circe", "../../src/fonts/Circe/Circe-Thin/fonts/Circe-Thin", 100);
+/*@include font-face("Circe", "../../src/fonts/Circe/Circe-Thin/fonts/Circe-Thin", 100);
 @include font-face("Circe", "../../src/fonts/Circe/Circe-ExtraLight/fonts/Circe-ExtraLight", 200);
 @include font-face("Circe", "../../src/fonts/Circe/Circe-Light/fonts/Circe-Light", 300);
 @include font-face("Circe", "../../src/fonts/Circe/Circe-Regular/fonts/Circe-Regular", 400);
 @include font-face("Circe", "../../src/fonts/Circe/Circe-Bold/fonts/Circe-Bold", 500);
-@include font-face("Circe", "../../src/fonts/Circe/Circe-ExtraBold/fonts/Circe-ExtraBold", 600);
+@include font-face("Circe", "../../src/fonts/Circe/Circe-ExtraBold/fonts/Circe-ExtraBold", 600);*/
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap&subset=cyrillic');
