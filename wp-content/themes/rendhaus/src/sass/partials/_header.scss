@@ -4,8 +4,12 @@ header {
   left: 0;
   width: 100%;
   z-index: 10;
-  padding: 20px 30px;
-  transition: padding .3s, background-color .3s, transform .6s 0s;
+  padding: 10px 50px;
+  transition: background-color .3s, transform .6s 0s;
+
+  @media(max-width: 768px){
+    padding: 10px 15px;
+  }
 
   .logo {
     display: block;
@@ -30,7 +34,7 @@ header {
 
       &:last-child {
         width: calc(100% - 200px);
-        @include flex-align(flex-end, baseline);
+        @include flex-align(flex-end, center);
       }
     }
   }
@@ -40,6 +44,7 @@ header {
     transition: padding .3s;
     margin: 0 -30px;
     width: 100%;
+    font-size: 12px;
 
     > li {
       padding: 0 31px;
@@ -89,7 +94,6 @@ header {
       text-decoration: none;
       transition: .3s;
     }
-
 
     .menu-item-has-children {
       position: relative;
@@ -230,7 +234,6 @@ header {
 
       }
 
-
       &.active {
         opacity: 1;
         visibility: visible;
@@ -275,12 +278,13 @@ header {
       display: none;
     }
     position: absolute;
-    right: 30px;
-    top: 17px;
+    right: 15px;
+    top: 50%;
     width: 40px;
     height: 40px;
     cursor: pointer;
     transition: top .3s;
+    transform: translateY(-50%);
 
     span {
       position: absolute;
@@ -321,7 +325,6 @@ header {
       }
     }
 
-
     &.active {
 
       span {
@@ -344,18 +347,17 @@ header {
 
   &.fixed_header {
     background-color: $bg-color;
-    padding: 3px 30px;
 
     .logo {
-      height: 34px;
+      //height: 34px;
     }
 
     .menu-toggle {
-      top: 0;
+      //top: 0;
     }
 
     #menu-mainmenu {
-      padding-top: 10px;
+      //padding-top: 10px;
 
       .menu-item-has-children {
 

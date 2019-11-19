@@ -1,0 +1,85 @@
+.wpcf7 {
+  position: relative;
+
+  .wpcf7-form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 0;
+    width: 100%;
+  }
+  input[type='text'], input[type='email'], input[type='tel'], textarea {
+    color: $bg-color;
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid $bg-color;
+    height: 34px;
+    padding: 0 8px;
+    text-transform: uppercase;
+    font: 14px/16px Ubuntu, sans-serif;
+    transition: .3s;
+    &::-webkit-input-placeholder {
+      color: rgba($brand-color-secondary, .5);
+      font-weight: 300;
+    }
+    &:-moz-placeholder {
+      color: rgba($brand-color-secondary, .5);
+      font-weight: 300;
+    }
+    &::-moz-placeholder {
+      color: rgba($brand-color-secondary, .5);
+      font-weight: 300;
+    }
+    &:-ms-input-placeholder {
+      color: rgba($brand-color-secondary, .5);
+      font-weight: 300;
+    }
+    &:not(:focus) {
+      //color: $brand-color-secondary;
+      border-bottom: 1px solid rgba($brand-color-secondary, .5);
+
+    }
+    &.wpcf7-not-valid {
+      border-color: red;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .wpcf7-not-valid-tip, .wpcf7-validation-errors {
+    display: none !important;
+  }
+}
+
+.section-lets-connect {
+  background: #f7f7f7;
+  padding: 100px 0;
+
+  .col {
+    @media(max-width: 768px) {
+      flex: auto;
+      width: 100%;
+    }
+  }
+
+  .disclaimer {
+    color: #333;
+    padding-bottom: 2em;
+    font-size: 12px;
+    a {
+      color: #ababab;
+      &:hover {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+
+}

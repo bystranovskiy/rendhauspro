@@ -1,7 +1,6 @@
 <?php
-add_image_size('full_hd', 1920, 1080);
-add_image_size('large', 1024, 768);
-add_image_size('medium', 300, 300);
+add_image_size('full_hd', 2000, 2000);
+add_image_size('large', 1024, 1024);
 
 /*add_action( 'wp_enqueue_scripts', function(){
     if (is_admin()) return; // don't dequeue on the backend

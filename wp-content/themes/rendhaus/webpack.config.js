@@ -99,18 +99,10 @@ module.exports = {
 
     externals: {
         "jquery": "jQuery"
+    },
+    optimization: {
+        minimize: NODE_ENV == 'production'
     }
 
+
 };
-
-
-if (NODE_ENV == 'production') {
-
-    module.exports.plugins.push(
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        })
-    )
-}

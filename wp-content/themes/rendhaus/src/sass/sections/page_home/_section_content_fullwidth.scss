@@ -1,0 +1,39 @@
+.section-content-fullwidth {
+  background: #f7f7f7;
+  font-size: 14px;
+  color: $brand-color-secondary;
+  padding: 100px 0;
+
+  .section-title {
+    text-align: center;
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .description {
+    @media(min-width: 769px) {
+      columns: 2;
+      column-gap: 50px;
+    }
+
+  }
+
+  .gallery {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+    .gallery-item {
+      display: inline-block;
+      padding: 10px;
+      img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        margin: 0 auto;
+        max-height: 70px;
+      }
+    }
+  }
+}

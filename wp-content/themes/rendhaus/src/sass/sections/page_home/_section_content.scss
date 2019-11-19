@@ -7,17 +7,30 @@
   overflow: hidden;
   font-size: 14px;
 
+  .description {
+    border-left: 1px solid $brand-color-primary;
+    padding-left: 15px;
+    p {
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .readmore {
+    padding-top: 25px;
+  }
+
   .animated-image {
     @media(min-width: 1025px) {
       position: absolute;
       right: 0;
       max-width: 50vw;
       width: 900px;
-      top: 50%;
-      transform: translateY(-50%);
     }
+    padding-top: 50px;
     text-align: right;
-    right: -15px;
+    right: -50px;
     position: relative;
 
     img {
@@ -39,6 +52,13 @@
   &.reverse {
     text-align: right;
 
+    .description {
+      border-left: 0;
+      padding-left: 0;
+      border-right: 1px solid $brand-color-primary;
+      padding-right: 15px;
+    }
+
     .section-title {
       &:after {
         left: auto;
@@ -52,7 +72,7 @@
 
     .animated-image {
       text-align: left;
-      left: -15px;
+      left: -50px;
       right: auto;
       @media(min-width: 1025px) {
         right: auto;

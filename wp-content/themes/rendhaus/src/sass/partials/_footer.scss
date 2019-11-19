@@ -1,0 +1,47 @@
+footer {
+  background: $bg-color;
+  padding: 15px 50px;
+  color: $brand-color-secondary;
+  font-size: 12px;
+  border-top: 1px solid $brand-color-primary;
+  @media(max-width: 768px) {
+    padding: 15px;
+  }
+  .col {
+    @include flex-align(unset, center);
+
+    &:last-child {
+      @include flex-align(flex-end, center);
+    }
+  }
+  .row {
+    @media(max-width: 768px) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      .col {
+        flex: auto;
+        width: 100%;
+        @include flex-align(center, center);
+      }
+    }
+  }
+  .copyright {
+    font-size: 10px;
+  }
+}
+
+#menu-footermenu {
+  margin: 0 -10px;
+  .menu-item {
+    padding: 10px;
+    display: inline-block;
+    a {
+      color: $brand-color-secondary;
+      transition: .3s;
+      text-decoration: none;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}

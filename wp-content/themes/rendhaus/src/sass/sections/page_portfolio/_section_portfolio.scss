@@ -1,0 +1,120 @@
+.section-portfolio {
+  background-color: white;
+  color: $brand-color-secondary;
+  padding: 50px 50px 80px;
+
+  @media(max-width: 768px){
+    padding: 50px 15px 80px;
+  }
+
+  .isotope-filter {
+    margin: 0 -10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    .filter-item {
+      display: inline-block;
+      padding: 10px;
+      @media(max-width: 768px) {
+        width: 100%;
+        padding: 5px 10px;
+      }
+      a {
+        transition: .3s;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+        font-size: 12px;
+        color: $brand-color-secondary;
+        &:hover, &.active {
+          color: $bg-color;
+        }
+      }
+
+    }
+  }
+
+  .portfolio-list {
+    margin: 0 -5px;
+
+    .list-item {
+      display: inline-block;
+      min-height: 200px;
+      position: relative;
+      overflow: hidden;
+      width: calc(25% - 10px);
+      margin: 5px;
+
+      @media(max-width: 1024px) {
+        width: calc(33.3% - 10px);
+      }
+      @media(max-width: 768px) {
+        width: calc(50% - 10px);
+      }
+      @media(max-width: 580px) {
+        width: calc(100% - 10px);
+      }
+
+      .item-bg {
+        @include full-cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: transform 2s;
+
+        &:before {
+          @include full-cover;
+          content: "";
+          background-color: rgba(black, 0.6);
+          transition: background-color 2s;
+        }
+      }
+
+      .inner-wrapper {
+        width: 100%;
+        position: relative;
+        text-decoration: none;
+        @include flex-align(center, center);
+        flex-direction: column;
+        min-height: 200px;
+      }
+
+      .post-title {
+        color: white;
+        font-size: 1.4em;
+      }
+
+      .button {
+        color: $brand-color-secondary;
+        font-size: 11px;
+        position: relative;
+        top: 40px;
+        &:before, &:after, span:before, span:after, i {
+          background: $brand-color-primary;
+        }
+      }
+
+      &:hover {
+        @include animate-header;
+        .item-bg {
+          transform: scale(1.1);
+          transition: transform 5s;
+
+          &:before {
+            background-color: rgba(black, 0.8);
+          }
+        }
+        .button {
+          @include button-hover;
+          color: #e6e6e6;
+          &:hover {
+            > span {
+              &:before {
+                //height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

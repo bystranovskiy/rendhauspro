@@ -1,0 +1,62 @@
+.section-about-project {
+  padding: 100px 0;
+  background: white;
+  color: $brand-color-secondary;
+
+  .row {
+    @media(max-width: 768px) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      .col {
+        flex: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .project-description {
+    border-left: 1px solid $brand-color-primary;
+    padding-left: 15px;
+    p {
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .project-details {
+    @media(max-width: 768px) {
+      margin-bottom: 50px;
+    }
+    .card {
+
+      margin-bottom: 20px;
+      display: flex;
+
+      .card-details {
+
+        .card-title {
+          display: block;
+          font-weight: 700;
+          margin-bottom: 5px;
+          color: $bg-color;
+        }
+        .card-text {
+          line-height: 1.2em;
+        }
+        sup {
+          vertical-align: super;
+          font-size: smaller;
+        }
+      }
+
+      &:before {
+        display: inline-block;
+        color: $bg-color;
+        padding: 0.15em 1em 0;
+        margin: 0;
+      }
+
+    }
+  }
+}

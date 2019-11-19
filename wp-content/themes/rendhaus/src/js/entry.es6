@@ -1,9 +1,13 @@
-require("../sass/style.scss");
+import "../sass/style.scss";
 
-require("./vendor/slick.min.js");
-require("./vendor/isotope.pkgd.min.js");
+import "./vendor/slick.min.js";
+import "./vendor/isotope.pkgd.min.js";
+import "./vendor/jquery.viewportchecker.js";
 
-require("./custom/customGlobal.es6");
-require("./custom/header.es6");
-require("./custom/animate-header.es6");
-require("./custom/hero-slider.es6");
+import "./custom/customGlobal.es6";
+import "./custom/header.es6";
+import "./custom/animate-header.es6";
+import "./custom/hero-slider.es6";
+import "./custom/filter-isotope.es6";
+import "./custom/viewportAnimations.es6";
+import "./custom/equal-height.es6";

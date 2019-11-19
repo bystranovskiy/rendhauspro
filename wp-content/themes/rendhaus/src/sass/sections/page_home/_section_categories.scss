@@ -1,53 +1,61 @@
 .section-categories {
-
+  background: white;
 }
 
 .section-categories_wrapper {
   display: flex;
+  flex-wrap: wrap;
 
   .category-item {
     flex: 1;
+    position: relative;
+    overflow: hidden;
+    @media(max-width: 1024px) {
+      flex: auto;
+      width: 100%;
+    }
 
-    .inner {
-      @include flex-align(center, center);
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: "";
+      border: 1px solid white;
+      width: 100%;
+      height: 100%;
+      transition: width .3s .3s, height .3s .3s, opacity .3s;
+      opacity: 0;
+    }
+
+    .bg-image {
+      @include full-cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: transform 2s;
+
+      &:before {
+        @include full-cover;
+        content: "";
+        background-color: rgba(black, 0.6);
+        transition: background-color 2s;
+      }
+
+    }
+    .inner-wrapper {
       position: relative;
-      overflow: hidden;
+      @include flex-align(center, center);
       min-height: 500px;
       text-decoration: none;
       padding: 20px;
       flex-direction: column;
 
-      .bg-image {
-        @include full-cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        transition: transform 2s;
-
-        &:before {
-          @include full-cover;
-          content: "";
-          background-color: rgba(black, 0.6);
-          transition: background-color 2s;
-        }
-
-      }
-
-      &:after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        content: "";
-        border: 1px solid white;
-        width: 100%;
-        height: 100%;
-        transition: width .3s .3s, height .3s .3s, opacity .3s;
-        opacity: 0;
+      @media(max-width: 1024px) {
+        min-height: 200px;
       }
 
       .category-name {
-        position: relative;
         font-size: 2em;
         color: white;
         font-weight: 700;
@@ -56,7 +64,6 @@
       }
 
       .category-description {
-        position: relative;
         text-transform: uppercase;
         color: white;
         font-weight: 300;
@@ -64,28 +71,50 @@
         opacity: 0;
       }
 
-      &:hover {
-        .bg-image {
-          transform: scale(1.1);
-          transition: transform 5s;
+      .button {
+        color: $brand-color-secondary;
+        font-size: 11px;
+        position: relative;
+        top: 40px;
+        &:before, &:after, span:before, span:after, i {
+          background: $brand-color-primary;
+        }
+      }
 
-          &:before {
-            background-color: rgba(black, 0.8);
+    }
+
+    &:hover {
+      .bg-image {
+        transform: scale(1.1);
+        transition: transform 5s;
+
+        &:before {
+          background-color: rgba(black, 0.8);
+        }
+      }
+
+      .category-description {
+        opacity: .6;
+      }
+
+      &:after {
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        opacity: .5;
+        transition: width .3s, height .3s, opacity 0s;
+      }
+
+      @include animate-header;
+      .button {
+        @include button-hover;
+        color: #e6e6e6;
+        &:hover {
+          > span {
+            &:before {
+              //height: 100%;
+            }
           }
         }
-
-        .category-description {
-          opacity:.6;
-        }
-
-        &:after {
-          width: calc(100% - 20px);
-          height: calc(100% - 20px);
-          opacity: .5;
-          transition: width .3s, height .3s, opacity 0s;
-        }
-
-        @include animate-header;
       }
     }
 

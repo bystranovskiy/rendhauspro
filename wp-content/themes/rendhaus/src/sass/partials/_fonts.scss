@@ -6,3 +6,7 @@
 @include font-face("Circe", "../../src/fonts/Circe/Circe-ExtraBold/fonts/Circe-ExtraBold", 600);*/
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap&subset=cyrillic');
+
+.icon-cubes:before {
+  text-indent: -0.15em;
+}
